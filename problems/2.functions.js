@@ -20,12 +20,13 @@ function greeting(name) {
 * @returns {null}
 * @modifies {global.globalCount}
 */
-let globalCount = 10
+
 
 function incrementGlobalCount(val) {
- console.log(global.globalCount + val)
+ global.globalCount += val
 }
 incrementGlobalCount(12)
+
 /** Multiplies three numbers
 * @param {number} firstNum - The first number
 * @param {number} secondNum - The second number

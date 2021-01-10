@@ -4,7 +4,8 @@
 */
 function firstAndLastAverage(arr) {
 let i = 0
-let average = (arr[i] + arr.length-1)/2
+let last = arr[arr.length-1]
+let average =  (arr[i] + last)/2
  if (arr.length < 2) {
    return null
  }
@@ -12,7 +13,7 @@ let average = (arr[i] + arr.length-1)/2
    return average
  }
 }
-console.log(firstAndLastAverage([1,2,0,3]))
+console.log(firstAndLastAverage([1,2,0,5]))
 
 /** Duplicates all values inside an array.
 * Sample input: [1,4,2,5]
@@ -24,7 +25,7 @@ function duplicateArray(arr) {
 let newArr = []
  for (let i = 0; i < arr.length; i++) {
    newArr.push(arr[i])
- } return newArr
+ } return newArr.concat(newArr)
 }
 console.log(duplicateArray([1,4,2,5]))
 
@@ -33,12 +34,10 @@ console.log(duplicateArray([1,4,2,5]))
 * @returns {any[]} - The array with the first 3 elements removed
 */
 function removeFirstThreeElements(arr) {
-let newArr = []
-  for (let i = 0; i < arr.length-2; i++) {
-    arr.splice(i)
-  } return arr
+let newArr = arr.slice(3)
+return newArr
  }
- console.log(duplicateArray([0,1,2,3]))
+ console.log(removeFirstThreeElements([0,1,2,3]))
 
 
 module.exports = {
